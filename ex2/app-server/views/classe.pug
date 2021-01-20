@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  .w3-container
+    button.w3-button.w3-teal.w3-medium(type='button', onclick='history.back();', style='margin: 10px') Voltar
+    a.w3-button.w3-teal.w3-medium(href='/', style='margin: 10px') Página Inicial
+  
+  .w3-container.w3-margin.w3-teal
+    h1= classe.codigo + ' - ' + classe.titulo
+
+  .w3-container.w3-margin
+    h3 Informação Base
+    h6 
+      b Nível: 
+      | #{classe.nivel}
+    h6 
+      b Status: 
+      | #{classe.status}
+    h6 
+      b Descrição: 
+      | #{classe.descricao} 
+
+    br
+
+    if classe.filhos.length > 0
+      h3 Filhos
+      ul.w3-ul.w3-hoverable
+        each f in classe.filhos
+          li
+            a(href='/classes/'+f.codigo) #{f.codigo}
+            |  - #{f.titulo}
+
+    if classe.nivel == 3
+      h3 Termos de índice
+      ul.w3-ul.w3-hoverable
+        each t in classe.termosInd
+          li
+            a(href='/termos#' + t.termo) #{t.termo}

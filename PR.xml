@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>Teste</key>
+        <title>Teste</title>
+        <bdate>20/01/2021</bdate>
+        <edate>20/01/2021</edate>
+        <supervisor url="https://www.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </meta>
+    <team>
+        <member id="a84244">
+            <name>Luís Cunha</name>
+            <email>a84244@alunos.uminho.pt</email>
+            <link url="https://github.com/luiscvnha">GitHub</link>
+        </member>
+    </team>
+    <abstract>
+        <p>Exercício 1</p>
+        <p>Alínea 1</p>
+        <p>
+            As alterações feitas foram as seguintes:
+            adição de '"' onde necessário;
+            adição de ',' onde necessário;
+            criação de um campo '_id' igual a 'ref' mas com as '/' substituídas por '_';
+            criação de um campo 'pai' e de um campo 'mae', retirando os seus valores a partir do 'title';
+            remoção da data duplicada nos campos 'date';
+            criação do campo 'ano' retirado a partir de 'date'.
+        </p>
+        <p>
+            Estas alterações foram feitas utilizando as capacidades do meu editor de texto, com a ajuda de expressões regulares.
+            Apenas a substituição das '/' por '_' no campo '_id' é que foi feita a partir do script "ex1/lex.sh",
+            corrido da seguinte forma "./lex.sh batismos".
+        </p>
+        <p>Alínea 3</p>
+        <p>
+            Foi usada uma base de dados MongoDB.
+            O comando usado para importar o conteúdo do ficheiro JSON foi:
+            mongoimport --jsonArray -d DAWTESTE -c batismos batismos-fixed.json
+        </p>
+        <p>Alínea 4</p>
+        <p>
+            Para correr basta ir à pasta 'ex1/api-server' e correr os comandos: 'npm i' e 'npm start'.
+        </p>
+
+        <p>Exercício 2</p>
+        <p>Aquecimento</p>
+        <p>
+            Q: Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 900?
+            R: 21 processos
+            [
+                {
+                    "codigo": "900.10.001",
+                    "titulo": "Conceção e realização de atividades ou acontecimentos artísticos",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.001",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.002",
+                    "titulo": "Conceção e realização de atividades desportivas ou recreativas",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.002",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.500",
+                    "titulo": "Organização e participação em homenagens e cerimónias comemorativas",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.500",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.501",
+                    "titulo": "Organização e participação em iniciativas de partilha e debate crítico",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.501",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.502",
+                    "titulo": "Organização e participação em iniciativas de prevenção e sensibilização",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.502",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.503",
+                    "titulo": "Organização e participação em iniciativas de promoção ou divulgação de produtos e serviços",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.503",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.504",
+                    "titulo": "Publicitação de iniciativas e atividades de terceiros",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.504",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.10.505",
+                    "titulo": "Organização e participação em cerimónia religiosa",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.10.505",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.001",
+                    "titulo": "Criação de imagem e identidade gráficas",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.001",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.002",
+                    "titulo": "Criação de produtos e artigos promocionais",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.002",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.200",
+                    "titulo": "Conceção de conteúdos institucionais para divulgação",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.200",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.201",
+                    "titulo": "Edição e publicação de conteúdos",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.201",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.400",
+                    "titulo": "Elaboração de informações ou esclarecimentos institucionais para a comunicação social",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.400",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.401",
+                    "titulo": "Promoção ou participação em conferências de imprensa e entrevistas",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.401",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.402",
+                    "titulo": "Recolha e tratamento de dados de imprensa",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.402",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.600",
+                    "titulo": "Criação e atualização de contactos institucionais",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.600",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.601",
+                    "titulo": "Organização de cerimónias protocolares",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.601",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.602",
+                    "titulo": "Organização de visitas institucionais",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.602",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.603",
+                    "titulo": "Processamento de pedidos de audiência",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.603",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.604",
+                    "titulo": "Processamento de pedidos de informação e de esclarecimento",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.604",
+                    "status": "A"
+                },
+                {
+                    "codigo": "900.20.605",
+                    "titulo": "Processamento de mensagens de cortesia",
+                    "id": "http://jcr.di.uminho.pt/m51-clav#c900.20.605",
+                    "status": "A"
+                }
+            ]
+        </p>
+        <p>
+            Q: Quantas entidades estão catalogadas?
+            R: 637
+        </p>
+        <p>
+            Q: Quantos processos (classes de nível 3) se encontram na descendência de 900.10?
+            R: 8
+        </p>
+        <p>
+            Q: Quantos processos (classes de nível 3) estão relacionados com 900.10.505?
+            R: 5
+        </p>
+        <p>Como correr</p>
+        <p>
+            Para correr basta ir à pasta 'ex2/app-server' e correr os comandos: 'npm i' e 'npm start'.
+        </p>
+    </abstract>
+    <deliverables>
+        <link url="ex1/">Exercício 1</link>
+        <link url="ex2/">Exercício 2</link>
+    </deliverables>
+</pr>

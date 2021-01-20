@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  .w3-container
+    button.w3-button.w3-teal.w3-medium(type='button', onclick='history.back();', style='margin: 10px') Voltar
+    a.w3-button.w3-teal.w3-medium(href='/', style='margin: 10px') Página Inicial
+  
+  .w3-container.w3-margin.w3-teal
+    h1(style='text-align: center;') Termos de índice
+
+  .w3-container.w3-margin
+    table.w3-table.w3-striped.w3-hoverable
+      tr
+        th Termo
+        th ID da classe
+        th Título da classe
+      each t in termos
+        tr
+          td
+            a(name=t.termo)= t.termo
+          td
+            a(href='/classes/'+t.idClasse)= t.idClasse
+          td
+            a(href='/classes/'+t.idClasse)= t.tituloClasse
