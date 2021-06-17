@@ -32,7 +32,7 @@ module.exports.listarBatisados = () => {
 // Esta alínea poderá ser resolvida de várias maneira e irá depender da forma como resolveste as primeiras.
 module.exports.listarProgenitores = () => {
     return Batismo
-        .findOne({}, {_id: 1, pai: 1, mae: 1})
+        .find({}, {_id: 1, pai: 1, mae: 1})
         .exec()
 }
 
